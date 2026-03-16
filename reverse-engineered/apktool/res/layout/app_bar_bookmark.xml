@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:background="@color/primaryColor" android:layout_width="fill_parent" android:layout_height="wrap_content" app:popupTheme="@style/MyCustomToolBarPopUpTheme" app:theme="@style/MyCustomToolBarTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/toolbar_title_text_size_bookmark" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app" />
+    <ImageView android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/ivDrawerRight" android:background="?selectableItemBackgroundBorderless" android:paddingLeft="20.0dip" android:paddingTop="18.0dip" android:paddingRight="15.0dip" android:paddingBottom="18.0dip" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_menu_actionbar" />
+    <ImageView android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/ivBookMark" android:background="?selectableItemBackgroundBorderless" android:paddingLeft="12.0dip" android:paddingTop="13.0dip" android:paddingRight="14.0dip" android:paddingBottom="13.0dip" android:layout_width="56.0dip" android:layout_height="56.0dip" />
+</androidx.appcompat.widget.Toolbar>

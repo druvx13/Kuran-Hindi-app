@@ -1,0 +1,14 @@
+# Large binary assets — already present in the XAPK at the repository root
+apktool/assets/db/*.db
+apktool/assets/fonts/**/*.ttf
+apktool/assets/fonts/**/*.otf
+apktool/res/raw/*.mp3
+
+# Raw DEX bytecode — redundant given smali and Java sources
+apktool/classes.dex
+jadx/resources/classes.dex
+jadx/resources/assets/db/*.db
+
+# Smali Dalvik disassembly — redundant given jadx Java sources (76 MB / 7 870 files)
+# Regenerate with: apktool d com.muslim.quran_hindi.apk -o apktool_smali_output
+apktool/smali/

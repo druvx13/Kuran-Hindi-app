@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:id="@id/lblList" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0px">
+        <RelativeLayout android:id="@id/relBismillah" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:gravity="right" android:layout_gravity="right" android:id="@id/ivBismillah" android:background="@drawable/bismillah" android:layout_width="fill_parent" android:layout_height="@dimen/bismillah_height" android:layout_marginLeft="@dimen/bismillah_margin_left" android:layout_marginRight="@dimen/list_details_margin_right" android:adjustViewBounds="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/listLinear" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/linLout" android:background="@drawable/list_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground">
+                <View android:id="@id/viewBottom1" android:background="#ffded1c5" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/navdrawerar_item_text_size" android:textColor="@android:color/black" android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/tvTitle" android:paddingLeft="@dimen/list_details_margin_right" android:paddingTop="8.0dip" android:paddingRight="@dimen/list_details_margin_right" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hugu" />
+                    <TextView android:textSize="@dimen/pager_navdrawer_item_transliteration_text_size" android:textColor="@android:color/black" android:layout_gravity="center" android:id="@id/tvTransliteration" android:paddingLeft="@dimen/list_details_margin_right" android:paddingRight="@dimen/list_details_margin_right" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hugu" />
+                    <TextView android:textSize="@dimen/pager_navdrawer_item_text_size" android:textColor="@android:color/black" android:layout_gravity="center" android:id="@id/tvSource" android:paddingLeft="@dimen/list_details_margin_right" android:paddingRight="@dimen/list_details_margin_right" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hugu" />
+                    <View android:id="@id/viewLast" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/details_List_Bottom_Hight" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

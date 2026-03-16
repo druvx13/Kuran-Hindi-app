@@ -1,0 +1,19 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Gradle wrapper jar (too large for some git configs)
+# gradle/wrapper/gradle-wrapper.jar
+
+# Android generated
+app/build/
+
+# Sensitive: replace with your own before building
+# app/google-services.json

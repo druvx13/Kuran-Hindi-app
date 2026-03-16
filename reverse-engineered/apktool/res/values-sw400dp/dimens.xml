@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bismillah_height">50.0dip</dimen>
+    <dimen name="bismillah_margin_left">70.0dip</dimen>
+    <dimen name="navdrawer_item_text_size">20.0sp</dimen>
+    <dimen name="navdrawerar_item_text_size">37.0sp</dimen>
+    <dimen name="pager_navdrawer_item_text_size">19.0sp</dimen>
+    <dimen name="pager_navdrawer_item_transliteration_text_size">17.0sp</dimen>
+    <dimen name="search_verse_text_size">32.0sp</dimen>
+    <dimen name="toolbar_title_hafizi">25.0dip</dimen>
+    <dimen name="toolbar_title_text_size">25.0dip</dimen>
+    <dimen name="toolbar_title_text_size_bookmark">24.0dip</dimen>
+    <dimen name="tvAyats_margin_left_right">10.0dip</dimen>
+    <dimen name="tvSuraNameAR_text_size">25.0sp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@mipmap/ic_popup" android:layout_width="wrap_content" android:layout_height="110.0dip" android:layout_marginRight="1.0dip" android:foreground="?android:selectableItemBackground">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/layoutOrientation" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="15.0dip" android:foreground="?android:selectableItemBackground">
+            <ImageView android:gravity="center|left" android:layout_gravity="center" android:background="@mipmap/ic_landscape" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center|left" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="7.0dip" android:text="Landscape" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/layoutGotoPage" android:background="?android:selectableItemBackground" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginBottom="8.0dip" android:foreground="?android:selectableItemBackground">
+            <ImageView android:gravity="center|left" android:layout_gravity="center" android:background="@mipmap/ic_find_pageview" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center|left" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="7.0dip" android:text="Go to Page" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="left" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0">
+        <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tvSura" android:background="#ff599c56" android:layout_width="0.0dip" android:layout_height="45.0dip" android:text="@string/surah_list" android:layout_weight="1.0" />
+        <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tvPara" android:background="#ff4d8b4b" android:layout_width="0.0dip" android:layout_height="45.0dip" android:text="@string/para_list" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ListView android:id="@id/listViewSurah" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" />
+    <ListView android:id="@id/listViewPara" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" />
+</LinearLayout>
