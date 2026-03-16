@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/nokol_statusbar" android:background="@color/primaryColorDark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="22.0dip" />
+    <include android:id="@id/app_bar" layout="@layout/app_bar" />
+    <androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="start" android:id="@id/content_left" android:layout_width="@dimen/nav_drawer_width" android:layout_height="fill_parent" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

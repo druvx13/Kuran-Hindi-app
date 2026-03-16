@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/relShare" android:background="@drawable/circle_filled1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <ImageView android:id="@id/share" android:padding="@dimen/dialog_padding_share" android:layout_width="@dimen/iv_dialog_share_wh" android:layout_height="@dimen/iv_dialog_share_wh" android:src="@drawable/ic_menu_share" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relBookmark" android:background="@drawable/circle_filled" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <ImageView android:id="@id/bookmark" android:padding="@dimen/dialog_padding_bookmark" android:layout_width="@dimen/iv_dialog_share_wh" android:layout_height="@dimen/iv_dialog_share_wh" android:src="@drawable/ic_star_bookmark" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relCopy" android:background="@drawable/circle_filled3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <ImageView android:id="@id/copy" android:padding="@dimen/dialog_padding_share" android:layout_width="@dimen/iv_dialog_share_wh" android:layout_height="@dimen/iv_dialog_share_wh" android:src="@drawable/ic_content_copy" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relPlay" android:background="@drawable/circle_filled2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <ImageView android:id="@id/play" android:padding="@dimen/dialog_padding_play" android:layout_width="@dimen/iv_dialog_share_wh" android:layout_height="@dimen/iv_dialog_share_wh" android:src="@drawable/ic_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

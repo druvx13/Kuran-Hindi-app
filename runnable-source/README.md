@@ -1,0 +1,163 @@
+# Al Quran Hindi — Reconstructed Android Project
+
+[![Android CI Build](https://github.com/druvx13/Kuran-Hindi-app/actions/workflows/android-build.yml/badge.svg)](https://github.com/druvx13/Kuran-Hindi-app/actions/workflows/android-build.yml)
+
+A Hindi-language Quran reader app for Android (package `com.muslim.quran_hindi`, version 2.2).  
+This directory contains the **reconstructed open-source project** derived from the reverse-engineered
+XAPK artifact. See `reverse-engineered/` and `ANALYSIS_REPORT.md` at the repository root for full
+static analysis details.
+
+---
+
+## Features
+
+- Full Quran text in Arabic with Hindi translation
+- 4 Arabic fonts selectable at runtime (Uthmanic OTF, MeQuran, Al-Mushaf, DroidNaskh)
+- Hafizi page-image mode
+- Full-text search
+- Surah and verse bookmarks
+- 4-reciter audio streaming (`quranicaudio.com`)
+
+---
+
+## Prerequisites
+
+| Tool | Minimum Version |
+|------|----------------|
+| Android Studio | Flamingo (2022.2.1) or newer |
+| JDK | 17 |
+| Android Gradle Plugin | 7.4.x |
+| Gradle | 7.5 |
+| Android SDK | API 34 (compileSdk) |
+
+---
+
+## Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/druvx13/Kuran-Hindi-app.git
+cd Kuran-Hindi-app/runnable-source
+```
+
+### 2. Extract required binary assets from the XAPK
+
+The Quran database and Arabic font files are **not** committed to version control (they are binary
+files already present in the original XAPK). Extract them before building:
+
+```bash
+cd ..   # repository root
+# Extract the XAPK (it is a ZIP)
+unzip "कुरान मजीद (हिंदी)   __   Al Quran Hindi_2.2_APKPure.xapk" com.muslim.quran_hindi.apk
+# Extract assets from the base APK
+unzip com.muslim.quran_hindi.apk "assets/db/Quran.db" "assets/fonts/*"
+# Copy into the project
+cp assets/db/Quran.db runnable-source/app/src/main/assets/db/
+cp -r assets/fonts/arabic runnable-source/app/src/main/assets/fonts/
+```
+
+### 3. Add Firebase configuration
+
+Replace `app/google-services.json` with your real Firebase project credentials:
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a project → Add Android app → Package name: `com.muslim.quran_hindi`
+3. Download `google-services.json` and overwrite `app/google-services.json`
+
+> **Note:** The build will succeed without a real `google-services.json` but Firebase/Analytics
+> features will not work at runtime.
+
+### 4. Build
+
+```bash
+cd runnable-source
+chmod +x gradlew
+
+# Debug build
+./gradlew assembleDebug
+
+# Release build (requires signing config)
+./gradlew assembleRelease
+```
+
+The APK will be at `app/build/outputs/apk/debug/app-debug.apk`.
+
+### 5. Install on device/emulator
+
+```bash
+adb install app/build/outputs/apk/debug/app-debug.apk
+```
+
+---
+
+## Project Structure
+
+```
+runnable-source/
+├── app/
+│   ├── src/main/
+│   │   ├── java/com/muslim/         ← App source code (65 Java classes)
+│   │   │   ├── Splash.java          ← Launcher activity
+│   │   │   ├── QuranApplication.java
+│   │   │   ├── quran_hindi/         ← Main Quran reading activity & adapters
+│   │   │   ├── Settings/            ← Settings screen
+│   │   │   ├── Search/              ← Full-text search
+│   │   │   ├── Bookmark/            ← Surah & verse bookmarks
+│   │   │   ├── hafizi/              ← Hafizi page-image mode
+│   │   │   └── necessary/           ← DB helpers & utilities
+│   │   ├── res/                     ← Android resources (layouts, drawables, values)
+│   │   ├── assets/
+│   │   │   ├── db/Quran.db          ← (excluded, see step 2)
+│   │   │   └── fonts/arabic/        ← (excluded, see step 2)
+│   │   └── AndroidManifest.xml
+│   ├── build.gradle
+│   ├── google-services.json         ← Replace with real Firebase credentials
+│   └── proguard-rules.pro
+├── build.gradle
+├── settings.gradle
+├── gradle.properties
+├── gradlew
+├── gradle/wrapper/
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Dependencies
+
+| Library | Version | Purpose |
+|---------|---------|---------|
+| `androidx.appcompat:appcompat` | 1.4.2 | AppCompat / Material themes |
+| `androidx.recyclerview:recyclerview` | 1.2.1 | Surah/verse lists |
+| `com.google.firebase:firebase-analytics` | (BOM 30.3.2) | Analytics |
+| `com.google.firebase:firebase-messaging` | (BOM 30.3.2) | Push notifications |
+| `com.google.android.gms:play-services-ads` | 20.6.0 | AdMob interstitial ads |
+| `com.github.futuremind:recycler-fast-scroll` | 0.2.5 | Fast-scroll overlay |
+| `com.github.clans:fab` | 1.6.4 | Floating action button |
+
+---
+
+## Known Build Notes
+
+- `Quran.db` and font TTF/OTF files are **not included** — extract from the XAPK (see step 2).
+- `app/google-services.json` contains a **template placeholder** — replace with real credentials.
+- Two stub activities (`HomeActivitySimple`, `HomeActivityNew`) are included; they simply redirect
+  to `QuranActivity` because their original implementations were not recovered during decompilation.
+- `R.java` and `BuildConfig.java` are **not included** — they are auto-generated by the Android
+  build system.
+
+---
+
+## Security Notes
+
+See `ANALYSIS_REPORT.md` at the repository root for the full security analysis. Key points:
+- `cleartextTrafficPermitted="true"` in `res/xml/network_security_config.xml` — audio streams over HTTP.
+- Replace `strings.xml` values for `google_api_key`, `firebase_database_url`, `gcm_defaultSenderId`,
+  and `admob_app_id` with your own credentials before publishing.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).

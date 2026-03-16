@@ -1,0 +1,63 @@
+name: Android CI Build
+
+on:
+  push:
+    branches: [ "**" ]
+    paths:
+      - 'runnable-source/**'
+  pull_request:
+    branches: [ "**" ]
+    paths:
+      - 'runnable-source/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Create placeholder binary assets
+        working-directory: runnable-source
+        run: |
+          # SQLite DB placeholder — app won't crash on empty DB during a compile-only CI check
+          mkdir -p app/src/main/assets/db
+          touch app/src/main/assets/db/Quran.db
+          # Font file placeholders — required for assets/ packaging, not for compilation
+          mkdir -p app/src/main/assets/fonts/arabic
+          for f in Al_Mushaf.ttf Al_Qalam_Quran_Majeed_2.ttf DroidNaskhRegular.ttf \
+                   UthmanicHafs1_Ver09.otf me_quran.ttf noorehidayat.ttf \
+                   noorehira.ttf noorehuda.ttf; do
+            touch app/src/main/assets/fonts/arabic/$f
+          done
+
+      - name: Grant execute permission for gradlew
+        working-directory: runnable-source
+        run: chmod +x gradlew
+
+      - name: Build debug APK
+        working-directory: runnable-source
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx2g"
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-apk
+          path: runnable-source/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: warn
+
