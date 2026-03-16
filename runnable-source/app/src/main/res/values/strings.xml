@@ -64,14 +64,8 @@
     <string name="fastscroll__app_name">RecyclerViewFastScroll</string>
     <string name="find">खोज</string>
     <string name="find_out">खोज</string>
-    <string name="firebase_database_url">YOUR_FIREBASE_DATABASE_URL</string>
     <string name="from">प्रारंभ</string>
     <string name="full_screen">पूर्ण स्क्रीन</string>
-    <string name="gcm_defaultSenderId">YOUR_GCM_SENDER_ID</string>
-    <string name="google_api_key">YOUR_GOOGLE_API_KEY</string>
-    <string name="google_app_id">YOUR_GOOGLE_APP_ID</string>
-    <string name="google_crash_reporting_api_key">YOUR_GOOGLE_API_KEY</string>
-    <string name="google_storage_bucket">YOUR_FIREBASE_STORAGE_BUCKET</string>
     <string name="hafezi_quran">हाफिजी कुरान</string>
     <string name="hafizi_prompt">Please touch Quran pages with wudhu</string>
     <string name="last_read_toast">Make sure that, It will make the process a little bit slower than before.</string>
@@ -88,7 +82,6 @@
     <string name="para_list">पैरा सूची</string>
     <string name="play">प्रारंभ</string>
     <string name="playbutton">प्ले ऑडियो</string>
-    <string name="project_id">quranapp-b1f84</string>
     <string name="pronunciation">उच्चारण</string>
     <string name="quran">कुरान मजीद</string>
     <string name="quran_1">कुरान</string>
