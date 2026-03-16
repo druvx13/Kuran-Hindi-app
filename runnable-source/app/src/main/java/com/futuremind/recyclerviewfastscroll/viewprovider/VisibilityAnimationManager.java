@@ -5,7 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.view.View;
-import com.futuremind.recyclerviewfastscroll.R;
+import com.muslim.quran_hindi.R;
 
 public class VisibilityAnimationManager {
     protected AnimatorSet hideAnimator;

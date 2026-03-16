@@ -642,7 +642,7 @@ public class QuranActivity extends AppCompatActivity {
 
     
     
-    public class SurahRecyclerAdapter extends RecyclerView.Adapter<SurahViewHolder> implements FastScrollRecyclerView.SectionedAdapter {
+    public class SurahRecyclerAdapter extends RecyclerView.Adapter<SurahRecyclerAdapter.SurahViewHolder> implements FastScrollRecyclerView.SectionedAdapter {
         SurahRecyclerAdapter() {
         }
 
@@ -674,7 +674,7 @@ public class QuranActivity extends AppCompatActivity {
 
         
         
-        public class SurahViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public static class SurahViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
             private TextView tvSurahName;
 
             SurahViewHolder(View view) {
@@ -710,7 +710,7 @@ public class QuranActivity extends AppCompatActivity {
 
     
     
-    public class VersesRecyclerAdapter extends RecyclerView.Adapter<VersesViewHolder> implements FastScrollRecyclerView.SectionedAdapter {
+    public class VersesRecyclerAdapter extends RecyclerView.Adapter<VersesRecyclerAdapter.VersesViewHolder> implements FastScrollRecyclerView.SectionedAdapter {
         VersesRecyclerAdapter() {
         }
 
@@ -742,7 +742,7 @@ public class QuranActivity extends AppCompatActivity {
 
         
         
-        public class VersesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public static class VersesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
             private TextView tvVerses;
 
             VersesViewHolder(View view) {

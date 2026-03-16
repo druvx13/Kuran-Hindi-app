@@ -12,7 +12,7 @@ import com.muslim.necessary.utils.Utils;
 import com.muslim.quran_hindi.R;
 import java.util.List;
 
-public class SuraAdapter114 extends RecyclerView.Adapter<MyViewHolder> implements SectionTitleProvider {
+public class SuraAdapter114 extends RecyclerView.Adapter<SuraAdapter114.MyViewHolder> implements SectionTitleProvider {
     private Activity activity;
     private List<Num114> list;
 
@@ -45,7 +45,7 @@ public class SuraAdapter114 extends RecyclerView.Adapter<MyViewHolder> implement
     }
 
     
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView textView;
 
         public MyViewHolder(View view) {

@@ -1,5 +1,7 @@
 package com.github.clans.fab;
 
+import com.muslim.quran_hindi.R;
+
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;

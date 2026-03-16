@@ -1,5 +1,7 @@
 package com.futuremind.recyclerviewfastscroll;
 
+import com.muslim.quran_hindi.R;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;

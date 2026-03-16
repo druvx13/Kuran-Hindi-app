@@ -1,5 +1,7 @@
 package com.github.clans.fab;
 
+import com.muslim.quran_hindi.R;
+
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.content.Context;

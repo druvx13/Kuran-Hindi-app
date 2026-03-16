@@ -12,7 +12,7 @@ import com.muslim.necessary.utils.Utils;
 import com.muslim.quran_hindi.R;
 import java.util.List;
 
-public class ImgAdapter11 extends RecyclerView.Adapter<MyViewHolder> implements SectionTitleProvider {
+public class ImgAdapter11 extends RecyclerView.Adapter<ImgAdapter11.MyViewHolder> implements SectionTitleProvider {
     private Activity activity;
     private DatabaseAccessor db = new DatabaseAccessor();
     private List<Img> list;
@@ -69,7 +69,7 @@ public class ImgAdapter11 extends RecyclerView.Adapter<MyViewHolder> implements 
     }
 
     
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;
 
         public MyViewHolder(View view) {

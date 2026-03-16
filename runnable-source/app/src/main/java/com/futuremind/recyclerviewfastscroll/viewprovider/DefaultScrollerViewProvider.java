@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-import com.futuremind.recyclerviewfastscroll.R;
+import com.muslim.quran_hindi.R;
 import com.futuremind.recyclerviewfastscroll.Utils;
 import com.futuremind.recyclerviewfastscroll.viewprovider.VisibilityAnimationManager;
 
