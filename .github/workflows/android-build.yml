@@ -30,20 +30,6 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Create placeholder binary assets
-        working-directory: runnable-source
-        run: |
-          # SQLite DB placeholder — app won't crash on empty DB during a compile-only CI check
-          mkdir -p app/src/main/assets/db
-          touch app/src/main/assets/db/Quran.db
-          # Font file placeholders — required for assets/ packaging, not for compilation
-          mkdir -p app/src/main/assets/fonts/arabic
-          for f in Al_Mushaf.ttf Al_Qalam_Quran_Majeed_2.ttf DroidNaskhRegular.ttf \
-                   UthmanicHafs1_Ver09.otf me_quran.ttf noorehidayat.ttf \
-                   noorehira.ttf noorehuda.ttf; do
-            touch app/src/main/assets/fonts/arabic/$f
-          done
-
       - name: Grant execute permission for gradlew
         working-directory: runnable-source
         run: chmod +x gradlew
