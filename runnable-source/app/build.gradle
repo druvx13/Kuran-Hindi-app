@@ -60,11 +60,11 @@ dependencies {
     // Google AdMob
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
 
-    // RecyclerView fast scroller (futuremind)
-    implementation 'com.github.futuremind:recycler-fast-scroll:0.2.5'
+    // RecyclerView fast scroller (bundled as source — see src/main/java/com/futuremind/)
+    // implementation 'com.github.futuremind:recycler-fast-scroll:0.2.5'
 
-    // Clans Floating Action Button
-    implementation 'com.github.clans:fab:1.6.4'
+    // Clans Floating Action Button (bundled as source — see src/main/java/com/github/clans/)
+    // implementation 'com.github.clans:fab:1.6.4'
 }
 
 apply plugin: 'com.google.gms.google-services'
