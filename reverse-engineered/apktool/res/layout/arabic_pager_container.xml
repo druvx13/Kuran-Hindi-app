@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:id="@id/lblList" android:background="#28dd1111" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/navdrawerar_item_text_size" android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/tvSura" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingRight="15.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hugu" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/nokol_statusbar" android:background="@color/primaryColorDark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="22.0dip" />
+        <include android:id="@id/app_bar" layout="@layout/app_bar_newest" />
+        <androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout_right" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <FrameLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </RelativeLayout>
+                    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:id="@id/right_drawer" android:background="#ffffffff" android:layout_width="@dimen/lin_right_width" android:layout_height="fill_parent">
+                        <ScrollView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:orientation="vertical" android:id="@id/linearLayoutLeft" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutHome" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivHome" android:background="@mipmap/ic_home" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvHome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Quran" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutSuraBookmark" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivSuraBookmark" android:background="@mipmap/ic_sura_bookmark" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvSuraBookmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Sura Bookmark" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutAyatBookmark" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivAyatBookmark" android:background="@mipmap/ic_sura_bookmark" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvAyatBookmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Ayat Bookmark" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutSearch" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivSearch" android:background="@mipmap/ic_search" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvSearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Search" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutHafezi" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivHafezi" android:background="@mipmap/ic_hafezi" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvHafezi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Hafezi" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutSettings" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivSettings" android:background="@mipmap/ic_settings" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvSettings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Settings" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutReadMe" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivReadMe" android:background="@mipmap/ic_readme" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvReadMe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Read Me" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/relativeLayoutDowanloadAll" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height" android:foreground="?android:selectableItemBackground">
+                                    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/rel_right_height">
+                                        <ImageView android:id="@id/ivDowanloadAll" android:background="@mipmap/ic_readme" android:layout_width="@dimen/iv_w_h" android:layout_height="@dimen/iv_w_h" android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                                        <TextView android:textSize="@dimen/tv_size" android:textColor="@android:color/black" android:id="@id/tvDowanloadAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_right_margin_left" android:text="Dowanload All" android:layout_centerVertical="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <include android:id="@id/rateshare" layout="@layout/rateshare" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </androidx.drawerlayout.widget.DrawerLayout>
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="start" android:id="@id/content_left" android:layout_width="@dimen/nav_drawer_width" android:layout_height="fill_parent" />
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </LinearLayout>
+</RelativeLayout>

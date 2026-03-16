@@ -1,0 +1,21 @@
+package com.google.android.gms.internal.ads;
+
+import com.google.android.gms.ads.doubleclick.AppEventListener;
+/* compiled from: com.google.android.gms:play-services-ads-lite@@19.1.0 */
+/* loaded from: classes.dex */
+public final class zzuq extends zzwg {
+    private final AppEventListener zzblk;
+
+    public zzuq(AppEventListener appEventListener) {
+        this.zzblk = appEventListener;
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzwh
+    public final void onAppEvent(String str, String str2) {
+        this.zzblk.onAppEvent(str, str2);
+    }
+
+    public final AppEventListener getAppEventListener() {
+        return this.zzblk;
+    }
+}

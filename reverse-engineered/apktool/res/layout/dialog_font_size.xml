@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_toLeftOf="@id/layout_arabic_font_style" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <TextView android:textSize="19.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/tv_arabic_font_size" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/arabic_text_size" />
+            <SeekBar android:gravity="center" android:id="@id/seekBar_ar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="40" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/relative_bn_font_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+        <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/layout_bangla_font_style" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <TextView android:textSize="19.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/tv_bangla_font" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/translation_text_size" />
+            <SeekBar android:gravity="center" android:id="@id/seekBar_bn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="25" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
