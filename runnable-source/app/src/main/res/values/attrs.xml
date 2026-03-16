@@ -63,6 +63,8 @@
     <attr name="fastscroll__style" format="reference" />
 
     <!-- clans/FloatingActionMenu library attrs -->
+    <attr name="menu_animationDelayPerItem" format="integer" />
+    <attr name="menu_backgroundColor" format="color" />
     <attr name="menu_buttonSpacing" format="dimension" />
     <attr name="menu_buttonToggleAnimation" format="reference" />
     <attr name="menu_colorNormal" format="color" />
